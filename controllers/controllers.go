@@ -28,16 +28,20 @@ func SearchStudentsId(c *gin.Context) {
 }
 
 func CreateStudents(c *gin.Context) {
-	var students models.Student
+	var student models.Student
 
-	if err := c.ShouldBindJSON(&students); err != nil {
+	if err := c.ShouldBindJSON(&student); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"error": err.Error()})
 		return
 	}
-
-	database.DB.Create(&students)
-	c.JSON(http.StatusOK, students)
+	if err := models.ValidateStudentData(&student); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"error": err.Error()})
+		return
+	}
+	database.DB.Create(&student)
+	c.JSON(http.StatusOK, student)
 }
 
 func DeleteStudents(c *gin.Context) {
@@ -64,6 +68,11 @@ func EditStudents(c *gin.Context) {
 			"error": err.Error()})
 		return
 	}
+	if err := models.ValidateStudentData(&student); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"error": err.Error()})
+		return
+	}
 	database.DB.Model(&student).UpdateColumns(student)
 	c.JSON(http.StatusOK, student)
 }
@@ -79,4 +88,18 @@ func SearchStudentsCPF(c *gin.Context) {
 		return
 	}
 	c.JSON(http.StatusOK, student)
+}
+
+func ViewPageIndex(c *gin.Context) {
+	var students []models.Student
+	database.DB.Find(&students)
+	c.HTML(http.StatusOK, "index.html", gin.H{
+		"students": students,
+	})
+}
+
+func RouteNotFound(c *gin.Context) {
+	c.HTML(http.StatusNotFound, "404.html", gin.H{
+		"not found": "not found",
+	})
 }

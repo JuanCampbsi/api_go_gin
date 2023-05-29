@@ -10,7 +10,7 @@
 
 </br>
 
-This project aims to create a robust REST API using the Go programming language (Golang). It takes advantage of several Go libraries to handle different tasks:
+This project aims to create a robust REST API using the Go programming language (Golang) and the gin framework.. It takes advantage of several Go libraries to handle different tasks:
 
 Gin: This HTTP web framework is used for API routing. Gin, optimized for speed, offers an elegant and simple interface for creating routes to the REST API and includes useful built-in features such as JSON validation and error handling.
 
@@ -23,7 +23,7 @@ Validation: The gopkg.in/validator.v2 library is used to validate the data befor
 With the combination of these libraries, this project provides a solid foundation for creating Go REST APIs that are easy to develop and test. It demonstrates best practices for structuring a Go application, including separation of responsibilities between routing, request handling, database interactions, and data validation.
 
 
-## Preview 
+## Preview Tests
 
 </br>
 

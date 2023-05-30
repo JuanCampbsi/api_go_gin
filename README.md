@@ -1,9 +1,10 @@
+![Go Reference](https://pkg.go.dev/badge/github.com/go-telegram-bot-api/telegram-bot-api/v5.svg)
+![Test](https://github.com/go-telegram-bot-api/telegram-bot-api/actions/workflows/test.yml/badge.svg)
 <div style="width:100%; display: flex; align-items: center;">
   <h1>Api Go REST - GIN Framework
    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" height="60" width="70" style="margin-bottom: -15px; z-index: -10; margin-left: 1.25rem"/>
   </h1> 
 </div>
-
 
 
 ### 🛠  Description   

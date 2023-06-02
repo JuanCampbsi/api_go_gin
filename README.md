@@ -11,9 +11,9 @@
 
 </br>
 
-This project aims to create a robust REST API using the Go programming language (Golang) and the gin framework.. It takes advantage of several Go libraries to handle different tasks:
+This project aims to create a robust REST API using the Go programming language (Golang) and the gin framework. It takes advantage of several Go libraries to handle different tasks:
 
-Gin: This HTTP web framework is used for API routing. Gin, optimized for speed, offers an elegant and simple interface for creating routes to the REST API and includes useful built-in features such as JSON validation and error handling.
+Gin: This HTTP web framework is used for API routing. Gin, optimized for speed, offers an elegant and simple interface for creating routes to the REST API and includes useful built-in features such as JSON validation and error handling. Also, the project implements Swagger documentation using the github.com/swaggo/gin-swagger library, making it easier to understand and use the API.
 
 Tests: Go's native testing library, in conjunction with the github.com/stretchr/testify/assert library, is used to write tests for the API. The assert library provides a set of useful assertion functions that can help make tests more readable and easier to write.
 
@@ -21,7 +21,7 @@ Database: Gorm, an Object-Relational Mapper (ORM) in Go, is used for database in
 
 Validation: The gopkg.in/validator.v2 library is used to validate the data before sending it to the database. This helps ensure that the data is in the correct format and meets any necessary requirements before it is stored.
 
-With the combination of these libraries, this project provides a solid foundation for creating Go REST APIs that are easy to develop and test. It demonstrates best practices for structuring a Go application, including separation of responsibilities between routing, request handling, database interactions, and data validation.
+With the combination of these libraries, this project provides a solid foundation for creating Go REST APIs that are easy to develop and test. It demonstrates best practices for structuring a Go application, including separation of responsibilities between routing, request handling, database interactions, and data validation. Furthermore, the integration of Swagger allows for effective documentation and easier usage of the API endpoints.
 
 
 ## Preview Tests
@@ -31,6 +31,19 @@ With the combination of these libraries, this project provides a solid foundatio
 <p align="center">
   <kbd>
  <img width="800" style="border-radius: 10px" height="400" src="https://github.com/JuanCampbsi/Preview_README/blob/0be0214da84b4c28d01b289b29b13a021a767e62/assets/api_gin.gif" alt="Intro"> 
+  </kbd>
+  </br>
+</p>
+
+</br>
+
+## Swagger
+
+</br>
+
+<p align="center">
+  <kbd>
+ <img width="800" style="border-radius: 10px" height="400" src="https://github.com/JuanCampbsi/Preview_README/blob/6b278c4f541c74d3940769df7d4c2b8282b009f8/assets/swagger.png" alt="Intro"> 
   </kbd>
   </br>
 </p>
